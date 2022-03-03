@@ -28,7 +28,6 @@ a:hover, a:active, a:focus {
 h1, h2, h3, h4, h5, h6 {
   color: var(--darker);
   margin-top: 3rem;
-  text-shadow: 3px 3px 5px rgba(0,0,0,.8);
 }
 
 h1 {
@@ -63,7 +62,6 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 1rem 0 1rem 0;
-  text-shadow: 3px 3px rgba(0,0,0,.8);
   text-align: left;
 }
 
