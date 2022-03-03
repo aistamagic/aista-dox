@@ -1,0 +1,39 @@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/logic.js"></script>
+    {% if page.og_image %}
+    <meta property="og:image" content="{{ page.og_image }}"/>
+    {% else %}
+    {% if site.og_image %}
+    <meta property="og:image" content="{{ site.og_image }}"/>
+    {% endif %}
+    {% endif %}
+    <title>{{ page.title }}</title>
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:locale" content="en_US" />
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    {% else %}
+    <meta name="description" content="{{ page.content | markdownify | strip_html | truncatewords: 40 }}" />
+    <meta property="og:description" content="{{ page.content | markdownify | strip_html | truncatewords: 40 }}" />
+    {% endif %}
+    <link rel="canonical" href="{{site.url}}{{page.url}}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:site_name" content="{{ page.title }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% if site.google_analytics and jekyll.environment == "production" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
