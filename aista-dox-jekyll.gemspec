@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "aista-dox-jekyll"
+  spec.name          = "aista-dox"
   spec.version       = "0.1.0"
   spec.authors       = ["Thomas Hansen"]
   spec.email         = ["info@aista.com"]
