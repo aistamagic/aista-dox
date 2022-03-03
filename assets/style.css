@@ -4,10 +4,12 @@ Variables
 :root{
   --light: #ffffff;
   --light_secondary: #fafafa;
+  --border_light: #f1f1f1;
   --dark: #272727;
   --darker: #1d1d1d;
   --accent: #03A9F4;
   --primary: #3F51B5;
+  --primary_hover: #354499;
   --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
 }
 /*=-=-=--=-=--
@@ -52,11 +54,16 @@ General classes
   cursor: pointer;
   min-width: 64px;
   line-height: 36px;
-  padding: 4px 16px;
+  padding: 0px 13px;
   border-radius: 4px;
   text-align: center;
   font-weight: 500;
   display: inline-block;
+  transition: color .2s;
+}
+.button:hover{
+  background-color: var(--primary_hover);
+  color: var(--light_secondary);
 }
 /*=-=-=--=-=--
 Header -- top
@@ -90,10 +97,14 @@ Header -- top
 .banner .last-section .button{
   margin-left: 16px;
 }
-.banner .logo {
-  color: var(--accent);
+.banner .logo a {
+  color: var(--dark);
   font-size: clamp(1rem, 2.5vw,1.5rem);
   text-align: left;
+  transition: color 0.2s;
+}
+.banner .logo a:hover {
+  color: var(--primary);
 }
 .banner .description {
   color: var(--dark);
@@ -124,7 +135,7 @@ Header -- collapsible menu
   background-color: var(--light_secondary);
 }
 .banner.expanded .expandable-panel {
-  height: 95vh;
+  height: 90vh;
   max-height: unset;
   transition: height .2s;
   overflow: auto;
@@ -132,6 +143,7 @@ Header -- collapsible menu
 .banner .sections {
   padding: 1rem;
   display: flex;
+  border-top: 2px solid var(--border_light);
 }
 .banner .sections .section {
   width: 100%;
