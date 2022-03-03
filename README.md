@@ -1,5 +1,5 @@
 
-# Aista Jekyll Theme
+# Aista Dox Jekyll Theme
 
 This is a Jekyll theme created for Aista Ltd, and more specifically [Magic Cloud](https://polterguy.github.io/) to
 document our project(s). If you want to use it for your own site, you're welcome to do so under the terms of 
@@ -19,7 +19,7 @@ To use the theme add something resembling the following to your YAML configurati
 
 ```
 # The next line declares you want to use this theme
-remote_theme: polterguy/aista-jekyll
+remote_theme: polterguy/aista-dox-jekyll
 
 # The next line declares the URL structure of your blog items
 permalink: /blog/:title
