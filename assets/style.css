@@ -1,4 +1,4 @@
-:host{
+:root{
   --light: #ffffff;
   --dark: #272727;
   --darker: #1d1d1d;
@@ -42,7 +42,7 @@ h1 {
   text-align: center;
   box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
   position: fixed;
-  z-index: 1;
+  z-index: 1024;
   left: 0;
   right: 0;
   top: 0;
@@ -98,16 +98,21 @@ h1 {
 
 .banner .menu-btn:focus .hamburger,
 .banner .menu-btn:hover .hamburger {
-  fill: #fc0;
+  fill: var(--accent);
   transition: fill .2s;
 }
 
 .banner .sections {
-  margin-top: 2.5rem;
+  padding: 2.5rem 1rem;
+  display: flex;
 }
 
 .banner .sections .section {
-  text-align: left;
+  width: 100%;
+}
+
+.banner .sections .section:not(:last-child) {
+  margin-right: 50px;
 }
 
 .banner .sections .section .section-title {
@@ -157,6 +162,7 @@ h1 {
   padding: 10vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
+  margin: auto;
 }
 
 .content .video {
