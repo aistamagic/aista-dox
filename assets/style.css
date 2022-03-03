@@ -3,6 +3,7 @@ Variables
 =-=-=--=-=--*/
 :root{
   --light: #ffffff;
+  --light_secondary: #fafafa;
   --dark: #272727;
   --darker: #1d1d1d;
   --accent: #03A9F4;
@@ -51,14 +52,16 @@ General classes
   cursor: pointer;
   min-width: 64px;
   line-height: 36px;
-  padding: 0 16px;
+  padding: 4px 16px;
   border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
 }
 /*=-=-=--=-=--
 Header -- top
 =-=-=--=-=--*/
 .banner {
-  padding: 0.5rem 1rem;
   box-shadow: var(--box-shadow);
   position: fixed;
   z-index: 1024;
@@ -71,18 +74,18 @@ Header -- top
   overflow: hidden;
 }
 .banner .top-bar{
+  padding: 0.5rem 1rem;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 .banner .first-section{
   display: flex;
   flex-direction: column;
 }
 .banner .last-section .button{
-  margin-left: 8px;
+  margin-left: 16px;
 }
 .banner .logo {
   color: var(--accent);
@@ -96,6 +99,9 @@ Header -- top
   color: var(--dark);
   font-style: italic;
   font-size: .8rem;
+}
+.banner .menu-btn{
+  vertical-align: middle;
 }
 .banner .menu-btn .hamburger {
   fill: #888;
@@ -113,6 +119,7 @@ Header -- collapsible menu
   height: 0;
   max-height: 0;
   overflow: hidden;
+  background-color: var(--light_secondary);
 }
 .banner.expanded .expandable-panel {
   height: 95vh;
@@ -121,7 +128,7 @@ Header -- collapsible menu
   overflow: auto;
 }
 .banner .sections {
-  padding: 2.5rem 1rem;
+  padding: 1rem;
   display: flex;
 }
 .banner .sections .section {
@@ -131,9 +138,9 @@ Header -- collapsible menu
   margin-right: 50px;
 }
 .banner .sections .section .section-title {
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: left;
 }
 .banner .sections .section .nav {
@@ -146,7 +153,10 @@ Header -- collapsible menu
 .banner .sections .section .nav li {
   margin-top: .75rem;
 }
-
+.banner .sections .section .nav li a{
+  color: var(--dark);
+  font-size: 0.85rem;
+}
 @keyframes swosh {
   0% {
     margin-left: 800px;
