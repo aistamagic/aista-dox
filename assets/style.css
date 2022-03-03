@@ -1,10 +1,17 @@
+/*=-=-=--=-=--
+Variables
+=-=-=--=-=--*/
 :root{
   --light: #ffffff;
   --dark: #272727;
   --darker: #1d1d1d;
   --accent: #03A9F4;
   --primary: #3F51B5;
+  --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
 }
+/*=-=-=--=-=--
+General settings
+=-=-=--=-=--*/
 body {
   margin:0;
   color: var(--dark);
@@ -34,12 +41,25 @@ h1 {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
 }
-
+/*=-=-=--=-=--
+General classes
+=-=-=--=-=--*/
+.button{
+  background-color: var(--primary);
+  color: var(--light);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+/*=-=-=--=-=--
+Header -- top
+=-=-=--=-=--*/
 .banner {
-  height: 100px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--box-shadow);
   position: fixed;
   z-index: 1024;
   left: 0;
@@ -50,13 +70,20 @@ h1 {
   transition: height .2s;
   overflow: hidden;
 }
-
-.banner.expanded {
-  height: 95vh;
-  transition: height .2s;
-  overflow: auto;
+.banner .top-bar{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-
+.banner .first-section{
+  display: flex;
+  flex-direction: column;
+}
+.banner .last-section .button{
+  margin-left: 8px;
+}
 .banner .logo {
   color: var(--accent);
   font-size: 1.5rem;
@@ -64,8 +91,68 @@ h1 {
   margin: 1rem 0 1rem 0;
   text-align: left;
 }
+.banner .description {
+  animation: swosh .5s ease-out 1s 1 normal forwards;
+  color: var(--dark);
+  font-style: italic;
+  font-size: .8rem;
+}
+.banner .menu-btn .hamburger {
+  fill: #888;
+  transition: fill .2s;
+}
+.banner .menu-btn:focus .hamburger,
+.banner .menu-btn:hover .hamburger {
+  fill: var(--accent);
+  transition: fill .2s;
+}
+/*=-=-=--=-=--
+Header -- collapsible menu
+=-=-=--=-=--*/
+.banner.expanded {
+  height: 95vh;
+  transition: height .2s;
+  overflow: auto;
+}
+.banner .sections {
+  padding: 2.5rem 1rem;
+  display: flex;
+}
+.banner .sections .section {
+  width: 100%;
+}
+.banner .sections .section:not(:last-child) {
+  margin-right: 50px;
+}
+.banner .sections .section .section-title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.banner .sections .section .nav {
+  padding-left: 1rem;
+  text-align: left;
+}
+.banner .sections .section .nav li {
+  list-style-image: url('/assets/bullet.png');
+}
+.banner .sections .section .nav li {
+  margin-top: .75rem;
+}
 
-.banner .mwr {
+@keyframes swosh {
+  0% {
+    margin-left: 800px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: .3;
+  }
+}
+
+/* .banner .mwr {
   position: absolute;
   top: 0;
   right: 0;
@@ -81,79 +168,21 @@ h1 {
   background: linear-gradient(#fc0, #850);
   border-radius: 0 0 0 50px;
   padding: 5px 15px 5px 30px;
-}
+} */
 
-.banner .menu-btn {
+/* .banner .menu-btn {
   position: absolute;
   top: 67px;
   right: 1rem;
-}
+} */
 
-.banner .menu-btn .hamburger {
-  fill: #888;
-  transition: fill .2s;
-}
 
-.banner .menu-btn:focus .hamburger,
-.banner .menu-btn:hover .hamburger {
-  fill: var(--accent);
-  transition: fill .2s;
-}
 
-.banner .sections {
-  padding: 2.5rem 1rem;
-  display: flex;
-}
 
-.banner .sections .section {
-  width: 100%;
-}
 
-.banner .sections .section:not(:last-child) {
-  margin-right: 50px;
-}
 
-.banner .sections .section .section-title {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  font-size: 1.2rem;
-}
 
-.banner .sections .section .nav {
-  padding-left: 1rem;
-  text-align: left;
-  margin-top: .5rem;
-}
 
-.banner .sections .section .nav li {
-  list-style-image: url(/assets/bullet.png);
-}
-
-.banner .sections .section .nav li {
-  margin-top: .25rem;
-}
-
-@keyframes swosh {
-  0% {
-    margin-left: 800px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0;
-    opacity: .3;
-  }
-}
-
-.banner .description {
-  position: absolute;
-  top: 75px;
-  left: .75rem;
-  animation: swosh .5s ease-out 1s 1 normal forwards;
-  opacity: 0;
-  color: #f0f0f0;
-  font-style: italic;
-  font-size: .8rem;
-}
 
 .content {
   max-width: 1024px;
