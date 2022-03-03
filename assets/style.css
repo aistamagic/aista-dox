@@ -109,8 +109,14 @@ Header -- top
 /*=-=-=--=-=--
 Header -- collapsible menu
 =-=-=--=-=--*/
-.banner.expanded {
+.banner .expandable-panel{
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+.banner.expanded .expandable-panel {
   height: 95vh;
+  max-height: unset;
   transition: height .2s;
   overflow: auto;
 }
