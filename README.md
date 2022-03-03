@@ -6,7 +6,7 @@ document our project(s). If you want to use it for your own site, you're welcome
 Creative Commons Attribution-ShareAlike version 4, implying you'll have to keep the link to our web site. Below
 is a screenshot of the theme in use over at [Magic Cloud's documentation site](https://polterguy.github.io/).
 
-![Screenshot of theme](https://raw.githubusercontent.com/polterguy/aista-dox-jekyll/master/screenshot.jpg)
+![Screenshot of theme](https://raw.githubusercontent.com/polterguy/aista-dox/master/screenshot.jpg)
 
 The theme works perfectly for your GitHub Page, and in fact it was explicitly created to document our
 own open source framework [Magic Cloud](https://github.com/polterguy/magic), and the theme is created
@@ -19,7 +19,7 @@ To use the theme add something resembling the following to your YAML configurati
 
 ```
 # The next line declares you want to use this theme
-remote_theme: polterguy/aista-dox-jekyll
+remote_theme: polterguy/aista-dox
 
 # The next line declares the URL structure of your blog items
 permalink: /blog/:title
