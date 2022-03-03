@@ -1,26 +1,32 @@
-
+:host{
+  --light: #ffffff;
+  --dark: #272727;
+  --darker: #1d1d1d;
+  --accent: #03A9F4;
+  --primary: #3F51B5;
+}
 body {
   margin:0;
-  color: #bebebe;
-  background-color: #111;
+  color: var(--dark);
+  background-color: var(--light);
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
 }
 
 a {
-  color: #fc0;
+  color: var(--accent);
   text-decoration: none;
   transition: color .2s;
 }
 
 a:hover, a:active, a:focus {
-  color: #c90;
+  color: var(--primary);
   text-decoration: none;
   transition: color .2s;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #e5e5e5;
+  color: var(--darker);
   margin-top: 3rem;
   text-shadow: 3px 3px 5px rgba(0,0,0,.8);
 }
@@ -34,12 +40,13 @@ h1 {
   height: 100px;
   padding: 1rem;
   text-align: center;
-  border-bottom: solid 1px #202020;
-  box-shadow: 0 5px 5px rgb(0,0,0);
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
   position: fixed;
   z-index: 1;
-  width: 100vw;
-  background-color: #111;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--light);
   box-sizing: border-box;
   transition: height .2s;
   overflow: hidden;
@@ -52,7 +59,7 @@ h1 {
 }
 
 .banner .logo {
-  color: #fc0;
+  color: var(--accent);
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 1rem 0 1rem 0;
@@ -147,8 +154,7 @@ h1 {
 
 .content {
   max-width: 1024px;
-  background: linear-gradient(#202020, #090909);
-  padding: 100px 1rem 5rem 1rem;
+  padding: 10vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
 }
@@ -262,11 +268,8 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    background-size: 100vw auto;
-    background-attachment: fixed;
-  }
+/* @media screen and (min-width: 1024px) {
+  
   .banner .logo {
     font-size: 2rem;
     line-height: 2rem;
@@ -290,21 +293,11 @@ h1 {
   .banner .sections .section {
     flex: .25;
   }
-  .content {
-    padding: 100px 3rem 5rem 3rem;
-    margin: 0 auto 3rem auto;
-    border-radius: 0 0 1rem 1rem;
-    border-right: solid 1px #252525;
-    border-bottom: solid 1px #252525;
-    border-left: solid 1px #252525;
-    box-shadow: 5px 5px 12px rgba(0,0,0,.8);
-    min-height: unset;
-  }
   .content .copyright {
     position: absolute;
     bottom: 1rem;
   }
-}
+} */
 
 @media print {
   .banner {
