@@ -257,7 +257,7 @@ Content
 =-=-=--=-=--*/
 .content {
   max-width: 1024px;
-  padding: 10vw 3vw;
+  padding: 5vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
   margin: auto;
@@ -270,7 +270,7 @@ Content
   height:0;
   overflow:hidden;
   border-radius: .5rem;
-  box-shadow: 3px 3px 8px rgba(0,0,0,.8);
+  box-shadow: var(--box-shadow);
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -280,7 +280,7 @@ Content
   display: block;
   margin: 3rem auto 3rem auto;
   border-radius: .5rem;
-  box-shadow: 3px 3px 8px rgba(0,0,0,.8);
+  box-shadow: var(--box-shadow);
 }
 
 .content ul img, 
@@ -420,7 +420,7 @@ Content
   padding:.5rem;
   border-radius: .2rem;
   border: solid 1px rgb(50,50,50);
-  box-shadow: 3px 3px 8px rgba(0,0,0,.8);
+  box-shadow: var(--box-shadow);
   margin-top: 2rem;
   margin-bottom: 2rem;
   overflow: auto;
