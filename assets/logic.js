@@ -45,23 +45,15 @@ function clearSearch(event) {
 
 
 function onScroll() {
-
   var topBtn = document.getElementById("topBtn");
 
-  // When the user scrolls down 20px from the top of the document, show the button
-
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topBtn.classList.add('show');
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    topBtn.className = 'show';
   } else {
-    topBtn.classList.remove('show');
+    topBtn.className = '';
   }
-
-  console.log(document.body.scrollTop, document.documentElement.scrollTop)
 }
 
 function scrollToTop() {
-  document.getElementById('body').scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
