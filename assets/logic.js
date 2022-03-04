@@ -46,6 +46,7 @@ function clearSearch(event) {
 function onScroll() {
   var content = document.getElementById("content");
   var yOffset = content.scrollTop;
+  console.log(yOffset)
   if (yOffset > 300) {
     topBtn.classList.add('show');
   } else {
