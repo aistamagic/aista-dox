@@ -131,6 +131,7 @@ Header -- top
 .banner .logo-img{
   max-height: 44px;
   margin-right: 10px;
+  transition: all 0.5s;
 }
 .banner .first-section{
   display: flex;
@@ -190,6 +191,9 @@ Header -- collapsible menu
   max-height: 0;
   overflow: hidden;
   background-color: var(--light_secondary);
+}
+.banner.notScrolled  .expandable-panel{
+  height: 85vh;
 }
 .banner.expanded .expandable-panel {
   height: 90vh;
