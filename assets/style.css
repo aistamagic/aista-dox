@@ -21,6 +21,7 @@ body {
   background-color: var(--light);
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
+  line-height: 1.8;
 }
 
 a {
