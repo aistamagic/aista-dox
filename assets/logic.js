@@ -27,8 +27,9 @@ function searchFn(event) {
     } else {
       li[i].style.backgroundColor = "";
     }
-    
+    if (filter === '') {
+      li[i].style.backgroundColor = "";
+    }
   }
-  console.log(filter)
   event.preventDefault();
 }
