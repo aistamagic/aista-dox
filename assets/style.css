@@ -205,6 +205,19 @@ Header -- collapsible menu
 .banner .expandable-panel .inner-panel{
   padding: 1rem;
   border-top: 2px solid var(--border_light);
+  width: var(--container_lg_width);
+  max-width: 100%;
+  margin: auto;
+}
+@media (min-width: 1640px){
+  .banner .expandable-panel .inner-panel{
+    width: var(--container_xxl_width);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1639px){
+  .banner .expandable-panel .inner-panel{
+    width: var(--container_xl_width);
+  }
 }
 .banner .expandable-panel .inner-panel .input {
   position: sticky;
