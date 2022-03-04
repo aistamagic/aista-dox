@@ -13,7 +13,6 @@ function toggleMenu(event) {
 }
 
 function searchFn(event) {
-
   var input  = document.getElementById('searchInput'),
       filter = input.value.toLowerCase(),
       li     = document.querySelectorAll("ul#nav li");
@@ -32,4 +31,9 @@ function searchFn(event) {
     }
   }
   event.preventDefault();
+}
+
+function clearSearch(event) {
+  document.getElementById('searchInput').value = '';
+  searchFn(event);
 }

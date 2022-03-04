@@ -32,7 +32,10 @@
 
       <div class="expandable-panel">
         <div class="inner-panel">
-          <input type="text" id="searchInput" onkeyup="searchFn(event)" placeholder="Search for pages.." title="Type in a name">
+          <div class="input">
+            <button class="close-btn" onkeyup="clearSearch(event)"></button>
+            <input type="text" id="searchInput" onkeyup="searchFn(event)" placeholder="Search for pages.." title="Type in a name">
+          </div>
 
           <nav class="sections">
             

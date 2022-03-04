@@ -144,6 +144,24 @@ Header -- collapsible menu
   padding: 1rem;
   border-top: 2px solid var(--border_light);
 }
+.banner .expandable-panel .inner-panel .input {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  z-index: 1;
+}
+.banner .expandable-panel .inner-panel .close-btn{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  background-image: url(/assets/close.png);
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .banner .expandable-panel .inner-panel #searchInput {
   background-image: url(/assets/search.png);
   background-position: 10px 12px;
@@ -156,11 +174,11 @@ Header -- collapsible menu
   margin-bottom: 12px;
   box-sizing: border-box;
   background-color: white;
-  position: sticky;
+  /* position: sticky;
   top: 0;
   z-index: 1;
   margin-left: auto;
-  display: block;
+  display: block; */
   border-radius: 5px;
 }
 .banner .sections {
