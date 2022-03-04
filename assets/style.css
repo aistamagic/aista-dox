@@ -313,7 +313,7 @@ Header -- collapsible menu
   left: -18px;
   height: 13px;
   width: 13px;
-  top: 5px;
+  top: 9px;
   opacity: 0.5;
 }
 
@@ -374,7 +374,7 @@ Content
 .content ol li {
   padding: 0px 0 4px 0px
 }
-.content ul li::before {
+.content ul:not(.blog-item) li::before {
   background-image: url(/assets/bullet.png);
   content: ' ';
   position: absolute;
@@ -475,6 +475,7 @@ Content
   margin-top: 2rem;
   margin-bottom: 2rem;
   overflow: auto;
+  line-height: 1.5;
 }
 
 .highlight .hll { background-color: #404040 }
