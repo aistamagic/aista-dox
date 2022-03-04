@@ -53,6 +53,6 @@ function onScroll() {
   }
 }
 
-function scrollTop() {
+function scrollToTop() {
   document.getElementById('content').animate({ scrollTop: 0 }, "slow");
 }
