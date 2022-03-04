@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 4rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 /*=-=-=--=-=--
 General classes
@@ -238,7 +238,7 @@ Header -- collapsible menu
 .banner .sections .section .nav li a:hover{
   color: var(--primary);
 }
-.banner .sections .section .nav li a::before {
+ul li a::before {
   content: ' ';
   background-image: url(/assets/bullet.png);
   background-size: 100%;
@@ -299,9 +299,9 @@ Content
   padding: 0px 0 4px 0px
 }
 
-.content ul li {
+/* .content ul li {
   list-style-image: url(/assets/bullet.png);
-}
+} */
 
 .content ul li ol,
 .content ol li ul {
