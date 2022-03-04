@@ -299,9 +299,18 @@ Content
 .content ol li {
   padding: 0px 0 4px 0px
 }
-
+.content ul li::before {
+  background-image: url(/assets/bullet.png);
+  content: ' ';
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  height: 15px;
+  width: 15px;
+  background-size: contain;
+}
 .content ul li {
-  list-style-image: url(/assets/bullet.png);
+  list-style: none;
 }
 
 .content ul li ol,
