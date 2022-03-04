@@ -508,18 +508,26 @@ Scroll to top button
   width: 30px;
   position: fixed;
   bottom: 0px;
-  right: 50px;
+  right: 3vw;
   opacity: 0.7;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(50px);
+  transform: translateY(40px);
+  cursor: pointer;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
 }
+#topBtn img {
+  max-width: unset;
+  display: unset;
+  margin: unset;
+  border-radius: unset;
+  box-shadow: none;
+}
 #topBtn.show{
-  transform: translateY(-50px);
+  transform: translateY(-40px);
 }
 #topBtn.show:hover{
   opacity: 1;

@@ -43,10 +43,9 @@ function clearSearch(event) {
   searchFn(event);
 }
 
-// window.onscroll = function () { onscroll() };
 
 function onScroll() {
-  //Get the button
+
   var topBtn = document.getElementById("topBtn");
 
   // When the user scrolls down 20px from the top of the document, show the button
@@ -61,5 +60,5 @@ function onScroll() {
 }
 
 function scrollToTop() {
-  document.getElementById('content').animate({ scrollTop: 0 }, "slow");
+  document.getElementById('body').animate({ scrollTop: 0 }, "slow");
 }
