@@ -60,5 +60,8 @@ function onScroll() {
 }
 
 function scrollToTop() {
-  document.getElementById('body').animate({ scrollTop: 0 }, "slow");
+  document.getElementById('body').scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
