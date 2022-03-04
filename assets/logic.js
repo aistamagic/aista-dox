@@ -2,7 +2,7 @@
 function toggleMenu(event) {
   var body = document.getElementById('body');
   var banner = document.getElementById('banner');
-  if (banner.className == 'banner') {
+  if (!banner.classList.contains('expanded')) {
     banner.classList.add('expanded');
     body.style.overflow = 'hidden';
   } else {

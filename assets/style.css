@@ -301,7 +301,7 @@ Content
 .content {
   width: var(--container_lg_width);
   max-width: 100%;
-  padding: 5vw 3vw;
+  padding: 100px 3vw 5vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
   margin: auto;
