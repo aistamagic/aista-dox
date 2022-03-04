@@ -16,7 +16,7 @@ function searchFn(event) {
 
   var input  = document.getElementById('searchInput'),
       filter = input.value.toUpperCase(),
-      li     = document.querySelectorAll(".ul#nav li");
+      li     = document.querySelectorAll("ul#nav li");
 
   // Loop through all list items, and hide those who don't match the search query
   for (var i = 0; i < li.length; i++) {
