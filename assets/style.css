@@ -87,6 +87,9 @@ Header -- top
   align-items: center;
   justify-content: space-between;
 }
+.banner .logo-img{
+  max-height: 44px;
+}
 .banner .first-section{
   display: flex;
   flex-direction: column;
