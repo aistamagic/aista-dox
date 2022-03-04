@@ -43,7 +43,7 @@ function clearSearch(event) {
   searchFn(event);
 }
 
-window.onscroll = function () { onscroll() };
+// window.onscroll = function () { onscroll() };
 
 function onScroll() {
   //Get the button
@@ -56,6 +56,8 @@ function onScroll() {
   } else {
     topBtn.classList.remove('show');
   }
+
+  console.log(document.body.scrollTop, document.documentElement.scrollTop)
 }
 
 function scrollToTop() {
