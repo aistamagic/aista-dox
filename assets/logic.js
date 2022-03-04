@@ -16,8 +16,8 @@ function searchFn() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("searchInput");
   filter = input.value.toLowerCase();
-  ul = site.nav_sections;
-  li = ul.items;
+  ul = document.querySelectorAll("#nav");
+  li = ul.getElementsByTagName("li");
   for (i = 0; i < li.length; i++) {
       a = li[i].getElementsByTagName("a")[0];
       txtValue = a.textContent || a.innerText;
