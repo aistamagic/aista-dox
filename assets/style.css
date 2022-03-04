@@ -98,7 +98,6 @@ Header -- top
   background-color: var(--light);
   box-sizing: border-box;
   transition: height .2s;
-  overflow: hidden;
 }
 .banner .top-bar{
   padding: 0.5rem 1rem;
@@ -124,6 +123,10 @@ Header -- top
 .banner .inline-logo{
   display: flex;
   align-items: center;
+}
+.banner.notScrolled .logo-img{
+  max-height: 70px;
+  transition: all 0.5s;
 }
 .banner .logo-img{
   max-height: 44px;
