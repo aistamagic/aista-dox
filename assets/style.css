@@ -13,12 +13,16 @@ Variables
   --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
 
   --container_lg_width: 1040px;
-  --container_xl_width: 1320px;
+  --container_xl_width: 1280px;
   --container_xxl_width: 1600px;
 }
 /*=-=-=--=-=--
 General settings
 =-=-=--=-=--*/
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
 body {
   margin:0;
   color: var(--dark);
@@ -27,7 +31,11 @@ body {
   min-height: 100vh;
   line-height: 1.8;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 a {
   color: var(--accent);
   text-decoration: none;
