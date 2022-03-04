@@ -44,7 +44,7 @@ function clearSearch(event) {
 }
 
 function onScroll() {
-  var content = document.getElementById("content");
+  var content = document.getElementById("body");
   var yOffset = content.scrollTop;
   console.log(yOffset)
   if (yOffset > 300) {
