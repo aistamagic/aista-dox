@@ -509,11 +509,14 @@ Footer
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 3vw;
   border-top: 1px solid var(--border_light);
 }
 .footer p{
   margin: 0;
-  font-size: 90%;
+  font-size: 84%;
   opacity: 0.8;
+}
+.footer p:not(:last-child){
+  margin-right: 30px;
 }
