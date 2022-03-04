@@ -27,12 +27,12 @@ function searchFn(event) {
     var a = li[i].querySelector("a");
 
     if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
-      li[i].style.backgroundColor = 'rgb(3, 169, 244, 0.25)';
+      li[i].style.fontWeight = '600';
     } else {
-      li[i].style.backgroundColor = "";
+      li[i].style.fontWeight = "";
     }
     if (filter === '') {
-      li[i].style.backgroundColor = "";
+      li[i].style.fontWeight = "";
     }
   }
   event.preventDefault();
