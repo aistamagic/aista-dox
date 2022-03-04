@@ -295,7 +295,7 @@ Header -- collapsible menu
 .banner .sections .section .nav li {
   list-style: none;
   position: relative;
-  margin-top: .75rem;
+  margin-top: .25rem;
 }
 .banner .sections .section .nav li a{
   color: var(--dark);
