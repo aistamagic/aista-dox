@@ -13,10 +13,10 @@ function toggleMenu(event) {
 }
 
 function searchFn(event) {
-  var input  = document.getElementById('searchInput'),
-      filter = input.value.toLowerCase(),
-      li     = document.querySelectorAll("ul#nav li");
-      closeBtn = document.getElementById('close-btn');
+  var input = document.getElementById('searchInput'),
+    filter = input.value.toLowerCase(),
+    li = document.querySelectorAll("ul#nav li");
+  closeBtn = document.getElementById('close-btn');
   if (filter) {
     closeBtn.style.visibility = 'visible';
   } else {
@@ -43,11 +43,15 @@ function clearSearch(event) {
   searchFn(event);
 }
 
+window.onscroll = function () { onscroll() };
+
 function onScroll() {
-  var content = document.getElementById("content");
-  var yOffset = content.scrollTop;
-  console.log(yOffset)
-  if (yOffset > 300) {
+  //Get the button
+  var topBtn = document.getElementById("topBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     topBtn.classList.add('show');
   } else {
     topBtn.classList.remove('show');
