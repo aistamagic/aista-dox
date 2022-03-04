@@ -16,7 +16,12 @@ function searchFn(event) {
   var input  = document.getElementById('searchInput'),
       filter = input.value.toLowerCase(),
       li     = document.querySelectorAll("ul#nav li");
-
+      closeBtn = document.getElementsByClassName('close-btn');
+  if (filter) {
+    closeBtn.style.visibility = 'visible';
+  } else {
+    closeBtn.style.visibility = 'hidden';
+  }
   // Loop through all list items, and hide those who don't match the search query
   for (var i = 0; i < li.length; i++) {
     var a = li[i].querySelector("a");
