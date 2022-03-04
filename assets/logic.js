@@ -45,12 +45,15 @@ function clearSearch(event) {
 
 
 function onScroll() {
+  var banner = document.getElementById('banner');
   var topBtn = document.getElementById("topBtn");
 
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     topBtn.className = 'show';
+    banner.classList.remove('notScrolled');
   } else {
     topBtn.className = '';
+    banner.classList.add('notScrolled');
   }
 }
 

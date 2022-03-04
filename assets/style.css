@@ -11,6 +11,7 @@ Variables
   --primary: #3F51B5;
   --primary_hover: #354499;
   --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  --box-shadow_level3: 0 3px 3px -2px #0003, 0 3px 4px #00000024, 0 1px 8px #0000001f;
 
   --container_lg_width: 1040px;
   --container_xl_width: 1280px;
@@ -82,8 +83,12 @@ General classes
 /*=-=-=--=-=--
 Header -- top
 =-=-=--=-=--*/
+.banner.notScrolled{
+  height: 100px;
+  transition: height .2s;
+}
 .banner {
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow_level3);
   position: fixed;
   z-index: 1024;
   left: 0;
