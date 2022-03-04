@@ -200,6 +200,7 @@ Header -- collapsible menu
   max-height: unset;
   transition: height .2s;
   overflow: auto;
+  border-bottom: 2px solid var(--border_light);
 }
 .banner .expandable-panel .inner-panel{
   padding: 1rem;
