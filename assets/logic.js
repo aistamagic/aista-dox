@@ -12,22 +12,29 @@ function toggleMenu(event) {
   event.preventDefault();
 }
 
-function searchFn() {
+function searchFn(event) {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("searchInput");
   filter = input.value.toLowerCase();
-  ul = document.querySelectorAll("#nav");
-  li = ul.forEach(x => {
-    return document.querySelectorAll("li")
-  });
-  for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
+  // ul = document.getElementById("nav");
+  // li = ul.getElementsByTagName("li");
+  // for (i = 0; i < li.length; i++) {
+  //     a = li[i].getElementsByTagName("a")[0];
+  //     txtValue = a.textContent || a.innerText;
+  //     if (txtValue.toLowerCase().indexOf(filter) > -1) {
+  //         li[i].style.display = "";
+  //     } else {
+  //         li[i].style.display = "none";
+  //     }
+  // }
+  document.querySelectorAll('#nav').forEach(item => {
+    a = item[i].getElementsByTagName("a")[0];
       txtValue = a.textContent || a.innerText;
       if (txtValue.toLowerCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
+          item[i].style.display = "";
       } else {
-          li[i].style.display = "none";
+          item[i].style.display = "none";
       }
-  }
+  })
   event.preventDefault();
 }
