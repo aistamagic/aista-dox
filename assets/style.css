@@ -87,8 +87,13 @@ Header -- top
   align-items: center;
   justify-content: space-between;
 }
+.banner .inline-logo{
+  display: flex;
+  align-items: center;
+}
 .banner .logo-img{
   max-height: 44px;
+  margin-right: 10px;
 }
 .banner .first-section{
   display: flex;
@@ -102,7 +107,7 @@ Header -- top
 }
 .banner .logo a {
   color: var(--dark);
-  font-size: clamp(1rem, 2.5vw,1.5rem);
+  font-size: clamp(0.85rem, 2.5vw,1.25rem);
   text-align: left;
   transition: color 0.2s;
 }
@@ -112,9 +117,11 @@ Header -- top
 .banner .description {
   color: var(--dark);
   font-style: italic;
-  font-size: clamp(60%,2.5vw,80%);
+  font-size: clamp(60%,2.5vw,75%);
   opacity: 0.5;
-  margin-top: 1px;
+}
+@media (max-width: 430px){
+  .banner .description{display: none;}
 }
 .banner .menu-btn{
   vertical-align: middle;
@@ -181,11 +188,6 @@ Header -- collapsible menu
   margin-bottom: 12px;
   box-sizing: border-box;
   background-color: white;
-  /* position: sticky;
-  top: 0;
-  z-index: 1;
-  margin-left: auto;
-  display: block; */
   border-radius: 5px;
 }
 .banner .sections {
@@ -249,14 +251,9 @@ Header -- collapsible menu
   opacity: 0.5;
 }
 
-
-
-
-
-
-
-
-
+/*=-=-=--=-=--
+Content
+=-=-=--=-=--*/
 .content {
   max-width: 1024px;
   padding: 10vw 3vw;
