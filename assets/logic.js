@@ -27,8 +27,10 @@ function searchFn(event) {
   //         li[i].style.display = "none";
   //     }
   // }
-  document.querySelectorAll('#nav').forEach((item, i) => {
-    a = item[i].getElementsByTagName("a")[0];
+  document.querySelectorAll('#nav').forEach((item, i) => {console.log(item, i)
+    a = item[i].forEach(element => {
+      a = element.getElementsByTagName("a")[0]
+    });
       txtValue = a.textContent || a.innerText;
       if (txtValue.toLowerCase().indexOf(filter) > -1) {
           item[i].style.display = "";
