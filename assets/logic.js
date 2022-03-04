@@ -25,8 +25,10 @@ function searchFn(event) {
     if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
       li[i].style.backgroundColor = 'rgb(3, 169, 244, 0.25)';
     } else {
-      li[i].style.backgroundColor = "transparent";
+      li[i].style.backgroundColor = "";
     }
+    
   }
+  console.log(filter)
   event.preventDefault();
 }
