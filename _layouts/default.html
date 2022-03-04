@@ -5,7 +5,7 @@
   {% include head.html %}
 </head>
 
-<body id="body" onscroll="onScroll()">
+<body id="body">
 
 
   <div class="banner" id="banner">
@@ -60,7 +60,7 @@
 
   </div>
 
-  <div class="content" id="content">
+  <div class="content" id="content" onscroll="onScroll()">
     <main>{{ content }}</main>
     <button id="topBtn" onclick="scrollToTop()"><img src="/assets/top.png" alt="Aista Magic Cloud" width="20px" /></button>
   </div>
