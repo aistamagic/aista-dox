@@ -192,7 +192,7 @@ Header -- collapsible menu
   overflow: hidden;
   background-color: var(--light_secondary);
 }
-.banner.notScrolled  .expandable-panel{
+.banner.notScrolled.expanded  .expandable-panel{
   height: 85vh;
 }
 .banner.expanded .expandable-panel {
