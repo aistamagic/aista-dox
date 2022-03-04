@@ -44,8 +44,8 @@ function clearSearch(event) {
 }
 
 function onScroll() {
-  var topBtn = document.getElementById("topBtn");
-  var yOffset = elmnt.scrollTop;
+  var body = document.getElementById("body");
+  var yOffset = body.scrollTop;
   if (yOffset > 300) {
     topBtn.classList.add('show');
   } else {
@@ -54,5 +54,5 @@ function onScroll() {
 }
 
 function scrollTop() {
-  document.getElementById('body').animate({ scrollTop: 0 }, "slow");
+  document.getElementById('content').animate({ scrollTop: 0 }, "slow");
 }
