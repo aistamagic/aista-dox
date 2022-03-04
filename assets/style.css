@@ -11,6 +11,9 @@ Variables
   --primary: #3F51B5;
   --primary_hover: #354499;
   --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+
+  --container_lg_width: 1024px;
+  --container_xl_width: 1024px;
 }
 /*=-=-=--=-=--
 General settings
@@ -88,9 +91,14 @@ Header -- top
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  width: 1024px;
+  width: var(--container_lg_width);
   max-width: calc(100% - 6vw);
   margin: auto;
+}
+@media (min-width: 1640px){
+  .banner .top-bar{
+    width: var(--container_xl_width);
+  }
 }
 .banner .inline-logo{
   display: flex;
@@ -270,14 +278,18 @@ Header -- collapsible menu
 Content
 =-=-=--=-=--*/
 .content {
-  width: 1024px;
+  width: var(--container_lg_width);
   max-width: 100%;
   padding: 5vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
   margin: auto;
 }
-
+@media (min-width: 1640px){
+  .content{
+    width: var(--container_xl_width);
+  }
+}
 .content .video {
   position:relative;
   padding-bottom:56.25%;
