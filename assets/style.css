@@ -238,7 +238,7 @@ Header -- collapsible menu
 .banner .sections .section .nav li a:hover{
   color: var(--primary);
 }
-ul li a::before {
+.banner .sections .section .nav li a::before {
   content: ' ';
   background-image: url(/assets/bullet.png);
   background-size: 100%;
@@ -299,9 +299,9 @@ Content
   padding: 0px 0 4px 0px
 }
 
-/* .content ul li {
+.content ul li {
   list-style-image: url(/assets/bullet.png);
-} */
+}
 
 .content ul li ol,
 .content ol li ul {
