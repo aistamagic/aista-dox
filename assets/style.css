@@ -88,6 +88,9 @@ Header -- top
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  width: 1024px;
+  max-width: calc(100% - 6vw);
+  margin: auto;
 }
 .banner .inline-logo{
   display: flex;
@@ -191,6 +194,7 @@ Header -- collapsible menu
 .banner .expandable-panel .inner-panel #searchInput {
   background-image: url(/assets/search.png);
   background-position: 10px 12px;
+  background-size: 20px;
   background-repeat: no-repeat;
   width: 300px;
   max-width: 100%;
@@ -266,7 +270,8 @@ Header -- collapsible menu
 Content
 =-=-=--=-=--*/
 .content {
-  max-width: 1024px;
+  width: 1024px;
+  max-width: 100%;
   padding: 5vw 3vw;
   min-height: calc(100vh - 100px);
   position: relative;
