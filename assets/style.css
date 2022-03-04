@@ -311,6 +311,7 @@ Content
 }
 .content ul li {
   list-style: none;
+  position: relative;
 }
 
 .content ul li ol,
