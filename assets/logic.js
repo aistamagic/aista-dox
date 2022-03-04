@@ -3,10 +3,10 @@ function toggleMenu(event) {
   var body = document.getElementById('body');
   var banner = document.getElementById('banner');
   if (banner.className == 'banner') {
-    banner.className = 'banner expanded';
+    banner.classList.add('expanded');
     body.style.overflow = 'hidden';
   } else {
-    banner.className = 'banner';
+    banner.classList.remove('expanded');
     body.style.overflow = '';
   }
   event.preventDefault();
