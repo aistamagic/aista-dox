@@ -130,7 +130,7 @@ Header -- top
   font-size: clamp(60%,2.5vw,75%);
   opacity: 0.5;
   margin-top: 0;
-  line-height: 0;
+  line-height: 0.6;
 }
 @media (max-width: 430px){
   .banner .description{display: none;}
@@ -197,7 +197,6 @@ Header -- collapsible menu
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 5px;
@@ -500,6 +499,26 @@ Content
 
 .content ul.blog-item li {
   list-style-image: none;
+}
+/*=-=-=--=-=--
+Scroll to top button
+=-=-=--=-=--*/
+#topBtn{
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  bottom: -50px;
+  right: 50px;
+  opacity: 0.7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+#topBtn.show{
+  transform: translateY(50px);
 }
 /*=-=-=--=-=--
 Footer

@@ -5,7 +5,7 @@
   {% include head.html %}
 </head>
 
-<body id="body">
+<body id="body" onscroll="onScroll()">
 
 
   <div class="banner" id="banner">
@@ -62,6 +62,7 @@
 
   <div class="content">
     <main>{{ content }}</main>
+    <button id="topBtn" onclick="scrollTop()"></button>
   </div>
   
   <footer>

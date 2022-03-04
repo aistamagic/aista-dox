@@ -42,3 +42,17 @@ function clearSearch(event) {
   document.getElementById('searchInput').value = '';
   searchFn(event);
 }
+
+function onScroll() {
+  var topBtn = document.getElementById("topBtn");
+  var yOffset = elmnt.scrollTop;
+  if (yOffset > 300) {
+    topBtn.classList.add('show');
+  } else {
+    topBtn.classList.remove('show');
+  }
+}
+
+function scrollTop() {
+  document.getElementById('body').animate({ scrollTop: 0 }, "slow");
+}
