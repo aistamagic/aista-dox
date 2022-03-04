@@ -23,9 +23,9 @@ function searchFn(event) {
     var a = li[i].querySelector("a");
 
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
+      li[i].style.backgroundColor = 'rgb(3, 169, 244, 0.25)';
     } else {
-      li[i].style.display = "none";
+      li[i].style.backgroundColor = "";
     }
   }
   event.preventDefault();
