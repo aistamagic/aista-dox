@@ -16,7 +16,7 @@ function searchFn(event) {
   var input  = document.getElementById('searchInput'),
       filter = input.value.toLowerCase(),
       li     = document.querySelectorAll("ul#nav li");
-      closeBtn = document.getElementsById('close-btn');
+      closeBtn = document.getElementById('close-btn');
   if (filter) {
     closeBtn.style.visibility = 'visible';
   } else {
