@@ -140,20 +140,41 @@ Header -- collapsible menu
   transition: height .2s;
   overflow: auto;
 }
-.banner .sections {
+.banner .expandable-panel .inner-panel{
   padding: 1rem;
-  display: flex;
   border-top: 2px solid var(--border_light);
+}
+.banner .expandable-panel .inner-panel #searchInput {
+  background-image: url(/assets/search.png);
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+.banner .sections {
+  padding-top: 1rem;
+  display: flex;
 }
 .banner .sections .section {
   width: 100%;
 }
-@media(max-width:750px){
+@media (min-width: 577px) and (max-width:750px){
   .banner .sections {
     flex-wrap: wrap;
   }
   .banner .sections .section {
     width: calc(50% - 50px);
+  }
+}
+@media (max-width: 576px){
+  .banner .sections {
+    flex-wrap: wrap;
+  }
+  .banner .sections .section:not(:last-child) {
+    margin-right: 0px;
   }
 }
 .banner .sections .section:not(:last-child) {

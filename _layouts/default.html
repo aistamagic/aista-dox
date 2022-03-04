@@ -31,19 +31,23 @@
       </div>
 
       <div class="expandable-panel">
-        <nav class="sections">
-        
-          {% for idxSection in site.nav_sections %}
-          <div class="section">
-            <h1 class="section-title">{{ idxSection.name }}</h1>
-            <ul class="nav">
-              {% for idxItem in idxSection.items %}
-              <li><a href="{{ idxItem.url }}">{{ idxItem.name }}</a></li>
-              {% endfor %}
-            </ul>
+        <div class="inner-panel">
+          <input type="text" id="searchInput" onkeyup="searchFn()" placeholder="Search for pages.." title="Type in a name">
+
+          <nav class="sections">
+            
+            {% for idxSection in site.nav_sections %}
+            <div class="section">
+              <h1 class="section-title">{{ idxSection.name }}</h1>
+              <ul class="nav" id="nav">
+                {% for idxItem in idxSection.items %}
+                <li><a href="{{ idxItem.url }}">{{ idxItem.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endfor %}
+            
           </div>
-          {% endfor %}
-        
         </nav>
       </div>
       
