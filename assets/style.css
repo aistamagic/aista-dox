@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-top: 4rem;
   margin-bottom: 2rem;
+  line-height: 1.2;
 }
 /*=-=-=--=-=--
 General classes
@@ -102,15 +103,23 @@ Header -- top
 }
 .banner .last-section{
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .banner .last-section .button{
   margin-left: 16px;
+}
+@media(max-width:355px){
+  .banner .last-section .button{
+    display: none;
+  }
 }
 .banner .logo a {
   color: var(--dark);
   font-size: clamp(0.85rem, 2.5vw,1.25rem);
   text-align: left;
   transition: color 0.2s;
+  line-height: 0;
 }
 .banner .logo a:hover {
   color: var(--primary);
@@ -120,12 +129,14 @@ Header -- top
   font-style: italic;
   font-size: clamp(60%,2.5vw,75%);
   opacity: 0.5;
+  margin-top: 0;
+  line-height: 0;
 }
 @media (max-width: 430px){
   .banner .description{display: none;}
 }
 .banner .menu-btn{
-  vertical-align: middle;
+  display: inherit;
 }
 .banner .menu-btn .hamburger {
   fill: #888;
@@ -304,7 +315,7 @@ Content
   content: ' ';
   position: absolute;
   left: -20px;
-  top: 5px;
+  top: 6px;
   height: 15px;
   width: 15px;
   background-size: contain;
