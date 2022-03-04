@@ -12,8 +12,8 @@ Variables
   --primary_hover: #354499;
   --box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
 
-  --container_xl_width: 1040px;
-  --container_lg_width: 1320px;
+  --container_lg_width: 1040px;
+  --container_xl_width: 1320px;
   --container_xxl_width: 1600px;
 }
 /*=-=-=--=-=--
