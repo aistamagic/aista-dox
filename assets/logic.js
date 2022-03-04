@@ -12,31 +12,21 @@ function toggleMenu(event) {
   event.preventDefault();
 }
 
-function searchFn(event) {console.log({% site.nav_sections %})
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("searchInput");
-  filter = input.value.toLowerCase();
-  // ul = document.getElementById("nav");
-  // li = ul.getElementsByTagName("li");
-  // for (i = 0; i < li.length; i++) {
-  //     a = li[i].getElementsByTagName("a")[0];
-  //     txtValue = a.textContent || a.innerText;
-  //     if (txtValue.toLowerCase().indexOf(filter) > -1) {
-  //         li[i].style.display = "";
-  //     } else {
-  //         li[i].style.display = "none";
-  //     }
-  // }
-  // document.querySelectorAll('#nav').forEach((item, i) => {
-  //   a = item[i].forEach(element => {
-  //     a = element.getElementsByTagName("a")[0]
-  //   });
-  //     txtValue = a.textContent || a.innerText;
-  //     if (txtValue.toLowerCase().indexOf(filter) > -1) {
-  //         item[i].style.display = "";
-  //     } else {
-  //         item[i].style.display = "none";
-  //     }
-  // })
+function searchFn(event) {
+
+  var input  = document.getElementById('searchInput'),
+      filter = input.value.toUpperCase(),
+      li     = document.querySelectorAll(".ul#nav li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (var i = 0; i < li.length; i++) {
+    var a = li[i].querySelector("a");
+
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
   event.preventDefault();
 }
