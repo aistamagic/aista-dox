@@ -358,6 +358,12 @@ Content
   box-shadow: var(--box-shadow);
 }
 
+@media (min-width: 768px) {
+  .content img {
+    max-width: 80%;
+  }
+}
+
 .content ul img, 
 .content ol img {
   margin: 0;
