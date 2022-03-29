@@ -85,12 +85,17 @@ General classes
 Header -- top
 =-=-=--=-=--*/
 .banner.notScrolled{
-  height: 100px;
+  height: 70px;
   transition: height .5s;
+  box-shadow: none;
+}
+.banner:not(.notScrolled){
+  height: 55px;
+  box-shadow: var(--box-shadow_level3);
+  backdrop-filter: saturate(50%) blur(3px);
 }
 .banner {
-  height: 60px;
-  box-shadow: var(--box-shadow_level3);
+  backdrop-filter: saturate(18%) blur(3px);
   position: fixed;
   z-index: 1024;
   left: 0;
