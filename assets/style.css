@@ -101,7 +101,7 @@ Header -- top
   left: 0;
   right: 0;
   top: 0;
-  background-color: var(--light);
+  /* background-color: var(--light); */
   box-sizing: border-box;
   transition: height .2s;
 }
