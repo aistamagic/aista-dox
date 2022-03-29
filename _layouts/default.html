@@ -44,7 +44,7 @@
 
           {% for idxSection in site.nav_sections %}
           <div class="section">
-            <h1 class="section-title">{{ idxSection.name }}</h1>
+            <h2 class="section-title">{{ idxSection.name }}</h2>
             <ul class="nav" id="nav">
               {% for idxItem in idxSection.items %}
               <li><a href="{{ idxItem.url }}">{{ idxItem.name }}</a></li>
