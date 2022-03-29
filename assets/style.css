@@ -101,7 +101,7 @@ Header -- top
   left: 0;
   right: 0;
   top: 0;
-  /* background-color: var(--light); */
+  background-color: rgba(var(--light),0.9);
   box-sizing: border-box;
   transition: height .2s;
 }
@@ -131,12 +131,11 @@ Header -- top
   align-items: center;
 }
 .banner.notScrolled .logo-img{
-  max-height: 70px;
+  height: 20px;
   transition: all 0.5s;
 }
 .banner .logo-img{
-  max-height: 44px;
-  margin-right: 10px;
+  height: 15px;
   transition: all 0.5s;
 }
 .banner .first-section{
