@@ -10,6 +10,10 @@
         "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
         "image": "{{ page.og_image }}",
         "articleSection": "{{ page.title | site.blog_title }}",
+        "author" : {
+          "@type" : "Organization",
+          "name" : "{{ site.title }}"
+        },
         "publisher" : {
             "@type" : "Organization",
             "name" : "{{ site.title }}"
