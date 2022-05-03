@@ -10,10 +10,8 @@
         "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
         "image": {
             "@type": "ImageObject",
-            "width": {{ page.img_width | default: site.img_width }},
-            "height": {{ page.img_height | default: site.img_height }},
-            "url": "{{ site.url }}{{ img.path }}"
-          }
+            "url": "{{ page.og_image }}"
+        },
         "articleSection": "{{ page.title | site.blog_title }}",
         "articleBody": {{ content  | markdownify | strip_html | truncatewords: 40 }},
         "publisher" : {
