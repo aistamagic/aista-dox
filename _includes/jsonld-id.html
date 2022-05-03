@@ -15,7 +15,7 @@
             "url": "{{ site.url }}{{ img.path }}"
           }
         "articleSection": "{{ page.title | site.blog_title }}",
-        "articleBody": {{ content | strip_html | jsonify }},
+        "articleBody": {{ content  | markdownify | strip_html | truncatewords: 40 }},
         "publisher" : {
             "@type" : "Organization",
             "name" : "{{ site.title }}"
