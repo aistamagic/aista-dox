@@ -8,7 +8,12 @@
         "name": "{{ page.title | site.blog_title }}",
         "datePublished": "{{ page.date }}",
         "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
-        "image": "{{ content.image }}",
+        "image": {
+            "@type": "ImageObject",
+            "width": {{ page.img_width | default: site.img_width }},
+            "height": {{ page.img_height | default: site.img_height }},
+            "url": "{{ site.url }}{{ page.img_url | default: site.img_url }}"
+          }
         "articleSection": "{{ page.title | site.blog_title }}",
         "articleBody": {{ content | strip_html | jsonify }},
         "publisher" : {
