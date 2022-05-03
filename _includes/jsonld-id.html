@@ -10,7 +10,6 @@
         "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
         "image": "{{ page.og_image }}",
         "articleSection": "{{ page.title | site.blog_title }}",
-        "articleBody": {{ content  | markdownify | strip_html | truncatewords: 40 }},
         "publisher" : {
             "@type" : "Organization",
             "name" : "{{ site.title }}"
