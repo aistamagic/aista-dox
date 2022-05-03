@@ -7,9 +7,10 @@
         "about": "{{ site.description }}",
         "name": "{{ page.title | site.blog_title }}",
         "datePublished": "{{ page.date }}",
+        "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
         "image": "{{ content.image }}",
         "articleSection": "{{ page.title | site.blog_title }}",
-        "articleBody": {{ content }},
+        "articleBody": {{ content | strip_html | jsonify }},
         "publisher" : {
             "@type" : "Organization",
             "name" : "{{ site.title }}"
