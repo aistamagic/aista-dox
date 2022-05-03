@@ -2,7 +2,7 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "url": "{{ prepend: site.baseurl | prepend: page.url | prepend: post.url }}",
+        "url": "{{ prepend: site.url | prepend: site.baseurl | prepend: page.url | prepend: post.url }}",
         "headline": "{{ page.title | site.blog_title }}",
         "about": "{{ site.description }}",
         "name": "{{ page.title | site.blog_title }}",
