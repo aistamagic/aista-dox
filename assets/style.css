@@ -418,6 +418,7 @@ Content
   max-width: 100%;
   display: block;
   margin: 3rem auto 3rem auto;
+  border-radius: .5rem;
 }
 
 @media (min-width: 768px) {
