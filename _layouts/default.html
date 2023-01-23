@@ -3,6 +3,11 @@
 
 <head>
   {% include head.html %}
+  {% if site.js_files %}
+  {% for file in site.js_files %}
+  <script src="{{ file }}" defer></script>
+  {% endfor %}
+  {% endif %}
 </head>
 
 <body id="body" onscroll="onScroll()">
