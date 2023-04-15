@@ -118,3 +118,6 @@ This website is like the coolest website in the world, because it features Banan
 
 The theme is freely available as open source under the terms of the [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
+## Copyright and maintenance
+
+The projects is copyright of Aista, Ltd 2021 - 2023, and professionally maintained by [AINIRO your friendly ChatGPT website chatbot vendor](https://ainiro.io).
