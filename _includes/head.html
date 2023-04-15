@@ -26,6 +26,8 @@
     {% endif %}
     {% if page.canonical_url %}
     <link rel="canonical" href="{{page.canonical_url}}" />
+    {% else %}
+    <link rel="canonical" href="{{site.url}}{{page.url}}" />
     {% endif %}
     <meta property="og:url" content="{{site.url}}{{page.url}}" />
     <meta property="og:site_name" content="{{ page.title }}" />
